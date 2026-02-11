@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Universal.Shared.Responses;
 
 namespace Universal.API.Controllers
@@ -50,5 +51,13 @@ namespace Universal.API.Controllers
         {
             throw new Exception("This is a server error.");
         }
+
+        [Authorize]
+        [HttpGet("secure")]
+        public ApiResponse<string> GetSecureData()
+        {
+            return Response("You are authenticated!");
+        }
+
     }
 }
