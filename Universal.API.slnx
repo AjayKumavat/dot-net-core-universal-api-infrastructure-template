@@ -1,4 +1,8 @@
 <Solution>
   <Project Path="Universal.API/Universal.API.csproj" />
-  <Project Path="Universal.DTO/Universal.DTO.csproj" />
+  <Project Path="Universal.Contracts/Universal.Contracts.csproj" />
+  <Project Path="Universal.Core/Universal.Core.csproj" />
+  <Project Path="Universal.Infrastructure/Universal.Infrastructure.csproj" />
+  <Project Path="Universal.Shared/Universal.Shared.csproj" />
+  <Project Path="Universal.Tests/Universal.Tests.csproj" />
 </Solution>
