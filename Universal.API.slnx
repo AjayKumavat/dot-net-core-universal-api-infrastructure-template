@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Universal.API/Universal.API.csproj" />
+  <Project Path="Universal.DTO/Universal.DTO.csproj" />
 </Solution>
