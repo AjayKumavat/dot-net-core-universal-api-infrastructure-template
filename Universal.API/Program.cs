@@ -1,7 +1,11 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Universal.API.Middlewares;
+using Universal.API.Validators;
+using Universal.Core.DependencyInjection;
 using Universal.Infrastructure.DependencyInjection;
 using Universal.Infrastructure.Persistence;
 using Universal.Shared.Security;
@@ -42,8 +46,7 @@ builder.Services.AddAuthentication("Bearer")
     });
 
 builder.Services.AddInfrastructure();
-
-
+builder.Services.AddCore();
 
 var app = builder.Build();
 

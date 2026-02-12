@@ -8,6 +8,11 @@ namespace Universal.Infrastructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Email)
+                .IsRequired();
+
             builder.HasOne(x => x.Role)
                 .WithMany()
                 .HasForeignKey(x => x.RoleId)

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Universal.Core.Interfaces;
+using Universal.Infrastructure.Repositories;
 using Universal.Infrastructure.Services;
 
 namespace Universal.Infrastructure.DependencyInjection
@@ -9,7 +10,8 @@ namespace Universal.Infrastructure.DependencyInjection
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddScoped<ITokenService, JwtTokenService>()
-                .AddScoped<IPasswordHasher, PasswordHasher>();
+                .AddScoped<IPasswordHasher, PasswordHasher>()
+                .AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }
